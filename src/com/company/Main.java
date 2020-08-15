@@ -1,23 +1,20 @@
 package com.company;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("n");
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
-
-        for (int i = 0; i <n ; i++) {
-            arr [i] = scanner.nextInt();
-
-
+        Scanner scan = new Scanner(System.in);
+        int size = scan.nextInt();
+        int[] num = new int[size];
+        for(int i =0; i < size; i++) {
+            num[i] = scan.nextInt();
         }
-        if (n >= 2) {
-            System.out.println(arr[0] + " " + arr[1]);
+        if (size >= 2){
+            System.out.println("[" + num[0] + ", " + num[1] + "]" );
+
+        }else{
+            System.out.println(Arrays.toString(num));
 
         }
     }
